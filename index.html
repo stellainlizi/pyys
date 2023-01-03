@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	    <meta charset="UTF-8" />
+		<title></title>
+		<style>
+			.biaoti{
+				position: absolute;
+				width: 100%;
+				z-index: 2;
+			}
+			.beijin{
+				width: 100%;
+				position: absolute;
+				z-index: 1;
+				min-width: 640px;
+			}
+			
+			.kapian{
+            z-index: 3;
+            margin: auto auto;
+            padding: 0;
+            position: absolute;
+            width: 90%;
+            left: 6%;
+            top: 110px;
+            text-align: center;
+        }
+			
+        .prev {
+        	padding: 0;
+        	margin: 0;
+            position: absolute;
+            z-index: 4;
+            top: 735px;
+            height: 170px;
+            left: 3%;  
+        }
+        .next {
+            right: 0.7%;
+            position: absolute;
+            z-index: 4;
+            top: 735px;
+            height: 170px;
+        }
+        .fanhui{
+        	position: absolute;
+            z-index: 4;
+            left:35px;
+            top:0px;
+            width: 90px;
+        }
+        .goumaiss
+        {
+        	position: absolute;
+            z-index: 4;
+            right:25px;
+            top: 1427px;
+            width: 300px;
+        }
+        .goumaisx
+        {
+        	position: absolute;
+            z-index: 4;
+            right:330px;
+            top: 1415px;
+            width: 330px;
+        }
+		</style>
+		
+	</head>
+	<body>
+	<img src="img/3_画板 1.png" class="biaoti">	
+	<img src="img/IMG_0530.PNG" class="beijin">
+	<img class="kapian"  src="img/IMG_1.PNG" >
+	<img class="prev" src="img/IMG_0532.PNG" >
+    <img class="next"  src="img/IMG_0533.PNG">  
+    <a href="http://www.baidu.com"> <img class="fanhui" src="img/IMG_0538.PNG"> </a>
+    <a href="http://www.baidu.com"> <img class="goumaiss" src="img/2_画板 1.png"> </a>
+    <a href="http://www.baidu.com"> <img class="goumaisx" src="img/1_画板 1.png"> </a>
+        <script type="text/javascript">
+      
+          var a = 1;
+      $(document).ready(function(){
+          $(".prev").click(function(){
+              a--;
+              if(a <= 0){
+                  a = 4;
+              }
+              $(".kapian").attr("src","img/IMG_"+a+".PNG")
+          });
+          $(".next").click(function(){
+              a++;
+              if(a >=5){
+                  a = 1;
+              }
+              $(".kapian").attr("src","img/IMG_"+a+".PNG")
+          });
+      })
+          
+      
+	</script>
+	</body>
+</html>
